@@ -1,0 +1,247 @@
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة الكتب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="search-box">
+     <img src="saerch.jpg" alt=""width="20px"class="i">
+     <input type="text" name="" id=""placeholder="searsh......"class="search-input"onkeyup="searsh()">
+ </div>
+ </center>
+    <main>
+    </main>
+    <div class="product-list">
+    <div class="ggg">
+<h3 class="sss">عصر النبوة</h3>
+<div class="jjj">
+<img src="21.jpg"width=140px height=140px class="saif"></a><br><br><br><br>
+<a href="https://foulabook.com/book/downloading/750521103"><button>تحميل</button><br><br><br><br></a>
+</div>
+</div>
+<br>
+<div class="ggg">
+<h3 class="hhh">عصر الخلفاء الراشدين</h3>
+<img src="20.jpg" class="saif" width=140px></a><br><br><br>
+<a href="https://foulabook.com/book/downloading/883324036"><button>تحميل</button><br><br><br><br></a>
+</div>
+<br>
+<div class="ggg">
+<h3 class="sss">العصر الأموي</h3>
+<img src="159.jpg"width=140px height=140px class="saif"></a><br><br><br><br>
+<a href="https://foulabook.com/book/downloading/272232510"><button>تحميل</button><br><br><br><br></a>
+</div>
+<br>
+<div class="ggg">
+<h3 class="hhh">العصر العباسي</h3>
+<img src="160.jpg"width=140px height=140px class="saif"></a><br><br><br><br>
+<a href="https://foulabook.com/book/downloading/104860174"><button>تحميل</button><br><br><br><br></a>
+</div>
+<br>
+<div class="ggg">
+<h3 class="hhh">العصر المملوكي</h3>
+<img src="161.jpg"width=140px height=140px class="saif"></a><br><br><br><br>
+<a href="https://foulabook.com/book/downloading/787611057"><button>تحميل</button><br><br><br><br></a>
+</div>
+<br>
+<div class="ggg">
+<h3 class="hhh">العصر العثماني</h3>
+<img src="162.jpg"width=140px height=140px class="saif"></a><br><br><br><br>
+<a href="https://foulabook.com/book/downloading/851175661"><button>تحميل</button><br><br><br><br></a>
+</div>
+<br>
+<a href="https://wa.me/2001098307754"><img src="whats.jpg" class="whats"></a>
+<a href="https://www.facebook.com/profile.php?id=100073485396369&mibextid=ZbWKwL"><img src="facebook.png" class="facebook"></a>
+<a href="https://www.instagram.com/saif._00s/profilecard/?igsh=cDJhYXFuemdxNml6"><img src="insta.png" class="insta"></a>
+
+<script>
+    function searsh(){
+       let searchBar = document.querySelector('.search-input').value.toUpperCase();//input text
+       let productList = document.querySelector('.product-list');//all items
+       let product = document.querySelectorAll('.ggg');//التحتوي علي عنصر المراد البحث عنه
+       let productName = document.getElementsByTagName('h3');//اسم العنصر المكاتوب بين الاتش تو
+
+
+       for (let i = 0; i<productName.length; i++){
+        if (productName[i].innerHTML.toUpperCase().indexOf(searchBar) >= 0){
+            product[i].style.display = "";
+        } else{
+            product[i].style.display = "none";
+        }
+
+       }
+
+    }
+</script>
+<script>
+const list = document.querySelectorAll(".list");
+
+function activeLink(){
+    list.forEach((item)=>{
+        // console.log(this);
+        console.log(item);
+    item.classList.remove("active")
+    this.classList.add("active")
+})}
+    
+
+list.forEach((item)=>item.addEventListener("click", activeLink))
+</script>
+</body>
+</html>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size:100% 100%;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-image: url('7.jpg');
+    }
+.hhh{
+float:left;
+margin-left:55px;
+}
+.ggg img {
+height:152px;
+}
+.saif{
+border-radius:5px 5px 5px 5px;
+float:right;
+}
+button {
+color:white;
+width:30%;
+float:right;
+margin-bottom:50px;
+margin-right:50px;
+border-radius:17px 17px 17px 17px;
+background-image:url(2.jpg);
+}
+.ggg{
+border-radius:7px;
+border:2px solid #fff;
+margin-top:5px;
+margin-top:3px;
+height:152px;
+}
+.ppp{
+float:left;
+margin-left:70px;
+}
+.ggg h3{
+color:white;
+margin-right:1px;
+}
+.search-box{
+margin-top:3px;
+background:#fff;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+.search-box input{
+margin-top:3px;
+            border: none;
+            outline: none;
+            background:none;
+            box-shadow: none;
+            width: 100%;
+            font-weight:bold;
+            color:#000;
+            font-size: 18px;
+            padding: 15px;
+        }
+        .i{
+            margin-left: 10px;
+            cursor: pointer;
+            width:40px;
+        }
+        .product-list{
+            padding: 20px 0;
+        }
+        .product{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+        .product img{
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit:contain;
+        }
+        .product-details h2{
+            font-size: 20px;
+
+        }
+        .product-details h3{
+            font-size: 18px;
+        }
+    
+        .kkk{
+        float:left;
+        margin-left:87px;
+        }
+        a{
+        left:50%;
+        }
+        .right:hover{
+        background-color:yellow;
+        border-radius:50%;
+        width:50px;
+        height:50px;       
+        }
+        .right{
+        width:50px;
+        height:50px;
+        margin-bottom:90px;
+        float:right;
+        }
+        .whats{
+        width:50px;
+        height:50px;
+        margin-left:20%;
+        }
+        .facebook{
+        width:50px;
+        height:50px;
+        margin-left:9%;
+        }
+        .insta{
+        width:50px;
+        height:50px;
+        margin-left:9%;
+        }
+        .lll{
+        float:left;
+        margin-left:30px;
+        }
+        .left:hover{
+        background-color:yellow;
+        border-radius:50%;
+        width:50px;
+        height:50px;        
+        }
+        .left{
+        width:50px;
+        height:50px;
+        margin-bottom:90px;
+        float:left;
+        }
+        .aaa{
+        float:left;
+        }
+        .sss{
+        float:left;
+        margin-left:70px;
+        }
+</style>
